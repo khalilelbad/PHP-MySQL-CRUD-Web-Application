@@ -4,6 +4,8 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 -- Database: `hospital_db`
 CREATE DATABASE IF NOT EXISTS hospital_db CHARACTER SET utf8;
+CREATE USER 'test'@'localhost' IDENTIFIED BY 'test';
+GRANT ALL PRIVILEGES ON test.* TO 'test'@'localhost';
 -- --------------------------------------------------------
 --
 -- Table structure for table `admins`
